@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa">
+   <head>
+      <meta charset = "utf-8">
+      <title>Forms</title>
+   </head>
+
+   <body dir="rtl">
+      <h1>فرم انتقادات و پیشنهادات</h1>
+
+      <p>لطفا این فرم را پر کنید تا به ما در بهبود سایت کمک کنید.</p>
+
+      <form method = "post" action = "http://www.deitel.com">
+
+         <input type = "hidden" name = "recipient"
+            value = "deitel@deitel.com">
+         <input type = "hidden" name = "subject" 
+            value = "Feedback Form">
+         <input type = "hidden" name = "redirect" 
+            value = "main.html"> 
+
+         <p><label>نام:
+               <input name = "name" type = "text" size = "25"
+                  maxlength = "30">
+            </label></p>
+  
+         <p>
+            <input type = "submit" value = "ارسال">
+            <input type = "reset" value = "پاک کن">
+         </p>   
+      </form>
+   </body>
+</html>
