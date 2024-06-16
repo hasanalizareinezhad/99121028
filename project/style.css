@@ -1,0 +1,109 @@
+/* تعریف فونت */
+@font-face {
+  font-family: nazanin;
+  src: url("/assets/fonts/B-NAZANIN.TTF") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: nazanin;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("/assets/img/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+section {
+  margin: 8% auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 30rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.describe {
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.describe > h1 {
+  font-size: 2.4rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.describe > p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.reserve-form {
+  width: 50%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reserve-form > h1 {
+  font-size: 2.4rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.holder {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.holder > label {
+  font-size: 1.2rem;
+  width: 30%;
+  text-align: left;
+}
+
+.holder > input,
+.holder > select {
+  font-size: 1.2rem;
+  width: 70%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.reserve-form > button {
+  align-self: center;
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reserve-form > button:hover {
+  background-color: #0056b3;
+}
