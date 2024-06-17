@@ -1,9 +1,10 @@
-/* تعریف فونت */
+/* Font Definition */
 @font-face {
-  font-family: nazanin;
+  font-family: "nazanin";
   src: url("/assets/fonts/B-NAZANIN.TTF") format("truetype");
 }
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@
 
 body {
   font-size: 62.5%;
-  font-family: nazanin;
+  font-family: "nazanin", sans-serif;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
@@ -21,41 +22,51 @@ body {
     url("/assets/img/main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
+  line-height: 1.6;
+  color: #333;
 }
 
-section {
-  margin: 8% auto;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  width: 50rem;
-  height: 30rem;
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.describe h1 {
+  font-size: 2.8rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.describe p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Main Section Styles */
+main {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-.describe {
-  width: 50%;
-  padding: 2rem;
-  text-align: center;
+section {
+  margin-bottom: 2rem;
 }
 
-.describe > h1 {
-  font-size: 2.4rem;
-  font-weight: bolder;
-  margin-bottom: 1rem;
-}
-
-.describe > p {
-  font-size: 1.6rem;
-  line-height: 1.6;
-}
-
+/* Form Styles */
 .reserve-form {
-  width: 50%;
+  width: 100%;
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 1.5rem;
@@ -64,35 +75,45 @@ section {
   gap: 1.5rem;
 }
 
-.reserve-form > h1 {
+.reserve-form h1 {
   font-size: 2.4rem;
   font-weight: bolder;
   margin-bottom: 1rem;
   text-align: center;
+  color: #007bff;
 }
 
 .holder {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  align-items: center;
 }
 
-.holder > label {
-  font-size: 1.2rem;
+.holder label {
+  font-size: 1.4rem;
   width: 30%;
-  text-align: left;
+  text-align: right;
+  color: #555;
 }
 
-.holder > input,
-.holder > select {
-  font-size: 1.2rem;
+.holder input,
+.holder select {
+  font-size: 1.4rem;
   width: 70%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  transition: border-color 0.3s;
 }
 
-.reserve-form > button {
+.holder input:focus,
+.holder select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.reserve-form button {
   align-self: center;
   font-size: 1.6rem;
   padding: 0.5rem 2rem;
@@ -104,6 +125,71 @@ section {
   transition: background-color 0.3s;
 }
 
-.reserve-form > button:hover {
+.reserve-form button:hover {
   background-color: #0056b3;
+}
+
+/* Reservation List Styles */
+#reservationList {
+  list-style: none;
+  padding: 0;
+}
+
+#reservationList li {
+  background: #f8f8f8;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+#reservationList li button {
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  color: #ffffff;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reservationList li button:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 -1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 1.5rem 1.5rem 0 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* Error Styles */
+.error {
+  border-color: #ff4d4d !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .holder {
+    flex-direction: column;
+  }
+
+  .holder label,
+  .holder input,
+  .holder select {
+    width: 100%;
+  }
 }
